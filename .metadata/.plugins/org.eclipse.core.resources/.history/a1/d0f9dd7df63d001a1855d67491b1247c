@@ -1,0 +1,13 @@
+package com.reviews.tripadvisor.service;
+
+public class TripAdvisorService {
+
+	public String fetchReviews(Integer pageId, Integer accesskey) {
+		// TODO Auto-generated method stub
+		webC
+		String url = "http://api.tripadvisor.com/api/partner/2.0/location/4458967/reviews?key=2A096B06CE7E4C06B2C9E37FF0CA120F&limit=50&lang=en&offset=0";
+		
+		return 
+	}
+
+}

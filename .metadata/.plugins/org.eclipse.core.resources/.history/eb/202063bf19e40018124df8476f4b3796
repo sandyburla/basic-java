@@ -1,0 +1,11 @@
+package Multithreading;
+
+public class ExceptionE {
+
+	public static void main(String[] args)  {
+		
+		throw new IllegalAccessException("divide by zero");
+		//System.out.println(10/0);
+		}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;java_8features.Lambda&apos; to &apos;impleInterface&apos;&#x0A;- Original project: &apos;java_8features&apos;&#x0A;- Original element: &apos;java_8features.Lambda&apos;&#x0A;- Renamed element: &apos;java_8features.impleInterface&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Lambda&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;java_8features{Lambda.java[Lambda" matchStrategy="1" name="impleInterface" qualified="false" references="true" similarDeclarations="false" stamp="1575120998491" textual="false" version="1.0"/>
+</session>

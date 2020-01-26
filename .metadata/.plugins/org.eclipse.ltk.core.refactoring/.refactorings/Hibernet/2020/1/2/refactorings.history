@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;MappingHibernet.Student&apos; to &apos;Students&apos;&#x0A;- Original project: &apos;Hibernet&apos;&#x0A;- Original element: &apos;MappingHibernet.Student&apos;&#x0A;- Renamed element: &apos;MappingHibernet.Students&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Student&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;MappingHibernet{Student.java[Student" matchStrategy="1" name="Students" qualified="false" references="true" similarDeclarations="false" stamp="1578745339262" textual="false" version="1.0"/>
+</session>

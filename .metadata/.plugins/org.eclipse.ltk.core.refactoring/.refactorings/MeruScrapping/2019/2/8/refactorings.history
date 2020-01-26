@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;MeruScrapping&apos;&#x0A;- Original project: &apos;MeruScrapping&apos;&#x0A;- Original element: &apos;anytime.csv&apos;" description="Delete element" element1="src/resource/anytime.csv" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1550572374858" subPackages="false" version="1.0"/>
+</session>

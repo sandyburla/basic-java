@@ -1,0 +1,10 @@
+package java_8features;
+
+public class Flatmap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

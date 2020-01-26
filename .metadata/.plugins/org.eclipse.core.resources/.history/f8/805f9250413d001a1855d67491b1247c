@@ -1,0 +1,5 @@
+package com.reviews.tripadvisor.dao;
+
+public class TripAdvisorService {
+
+}

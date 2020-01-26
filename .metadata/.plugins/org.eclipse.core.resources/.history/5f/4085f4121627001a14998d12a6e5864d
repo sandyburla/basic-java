@@ -1,0 +1,99 @@
+package java_8features;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class MapFunction {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		System.out.println("=========== Uisng Map operation =======");
+		List<String> l = Arrays.asList("Sandy is a good boy","sahithi","ashiwni","lakshmi","varsha","nikitha");
+		List<Integer> t = l.stream().map(String::length).collect(Collectors.toList());
+		t.forEach(System.out::println);
+		
+		
+		System.out.println("=========== Uisng FlatMap operation =======");
+		List<String> l1 = Arrays.asList("sandy","sahithi","ashiwni","lakshmi","varsha","nikitha");
+	    List<String> x1 = l1.stream().map(x -> x.split(""))
+				.flatMap(Arrays::stream)
+				.distinct().collect(Collectors.toList());
+	    System.out.println(x1);
+//		System.out.println(l1.stream().map(x -> x.split(""))
+//				.flatMap(Arrays::stream)
+//				.distinct().collect(Collectors.toList()));
+		
+		List<User> user = Arrays.asList(new User(1,"sandy", Arrays.asList("9951161771","8499915176")),
+				new User(2,"mandy",Arrays.asList("8121999420","9133515164")),
+				new User(3,"randy",Arrays.asList("9848850217","8328678447")),
+				new User(4,"dandy",Arrays.asList("9966772028","7731816814")));
+		
+		List<User> users = Arrays.asList(new User(1,"sandy", Arrays.asList("9951161771","8499915176")),
+				new User(2,"mandy",Arrays.asList("8121999420","9133515164")),
+				new User(3,"randy",Arrays.asList("9848850217","8328678447")),
+				new User(4,"dandy",Arrays.asList("9966772028","7731816814")));
+		
+		List<List<User>> u = Arrays.asList(user,users);
+		List<User> u1 = u.stream().flatMap(m -> m.stream()).collect(Collectors.toList());
+		
+		System.out.println("======list in list========="+u);
+		
+//		Optional<String> f = user.stream().map(r ->r.getPhones().stream()).flatMap(t1 -> t1.filter(t2 -> t2.equals("8121999420"))).findAny();
+	user.stream().flatMap(t1 -> t1.getPhones().stream()).filter(c -> c.equals("9951161771")).collect(Collectors.toList()).forEach(System.out::println);
+//		System.out.println("========>>>>>"+f);
+				
+
+	}
+
+}
+
+class User{
+	
+    private int id;
+    private String name;
+    private List<String> phones;
+    
+    
+	public List<String> getPhones() {
+		return phones;
+	}
+
+	public void setPhones(List<String> phones) {
+		this.phones = phones;
+	}
+
+	
+	public User(int id, String name, List<String> phones) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.phones = phones;
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", phones=" + phones + "]";
+	}
+
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+    
+}

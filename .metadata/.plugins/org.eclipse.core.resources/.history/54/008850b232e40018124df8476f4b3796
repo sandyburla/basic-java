@@ -1,0 +1,21 @@
+package Multithreading;
+
+public class ExceptionE {
+
+	public static void main(String[] args) throws InterruptedException  {
+		doStuff();
+		//System.out.println(10/0);
+		}
+
+	private static void doStuff() throws InterruptedException {
+		// TODO Auto-generated method stub
+		doMoreStuf();
+		
+	}
+
+	private static void doMoreStuf() throws InterruptedException {
+		// TODO Auto-generated method stub
+		Thread.sleep(10000);
+	}
+
+}

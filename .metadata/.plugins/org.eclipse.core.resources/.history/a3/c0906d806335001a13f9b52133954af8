@@ -1,0 +1,52 @@
+package MappingHibernet;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class Mapping{
+	SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+	Session session = factory.openSession();
+	 Transaction tx = null;
+     Integer employeeID = null;
+	
+	public static void main(String[] args) {
+//		 try {
+//			 SessionFactory factory = new Configuration().configure().buildSessionFactory();
+//	      } catch (Throwable ex) { 
+//	         System.err.println("Failed to create sessionFactory object." + ex);
+//	         throw new ExceptionInInitializerError(ex); 
+//	      }
+		 Mapping m = new Mapping();
+//		 int x0 = m.addEmployee(1,"sandy","sandy@gmail.com","padmanagar");
+//		 int x1 = m.addEmployee(2,"mandy","mandy@gmail.com","indramanagar");
+//		 int x2 = m.addEmployee(3,"candy","candy@gmail.com","bynagar");
+//		 int x3 = m.addEmployee(4,"dandy","dandy@gmail.com","subhashnagar");
+		 
+		 int x3 = m.addEmployee("dandy","dandy@gmail.com","subhashnagar");
+		 int x0 = m.addEmployee("sandy","sandy@gmail.com","padmanagar");
+//		 int x1 = m.addEmployee("mandy","mandy@gmail.com","indramanagar");
+//		 int x2 = m.addEmployee("candy","candy@gmail.com","bynagar");
+//		 int x4 = m.addEmployee("randy","randy@gmail.com","mehruhnagar");
+		 
+	}
+
+//	private int addEmployee( int i, String string, String string2, String string3) {
+		private int addEmployee(String string, String string2, String string3) {
+		// TODO Auto-generated method stub
+		
+	      try {
+	          tx = session.beginTransaction();
+	          Student s = new Student(string, string2, string3);
+//	          Student s = new Student(i,string, string2, string3);
+	          employeeID = (Integer) session.save(s); 
+	          tx.commit();
+	       } catch (HibernateException e) {
+	          if (tx!=null) tx.rollback();
+	          e.printStackTrace(); 
+	       }
+	       return employeeID;
+	}
+}

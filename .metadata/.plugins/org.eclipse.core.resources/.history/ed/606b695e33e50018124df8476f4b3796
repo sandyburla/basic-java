@@ -1,0 +1,14 @@
+package Multithreading;
+
+public class DefaultException {
+
+	public static void main(String[] args){
+		throw new SandyException("---------------");
+	}
+
+}
+class SandyException extends RuntimeException{
+	SandyException(String s){
+		super(s);
+	}
+}

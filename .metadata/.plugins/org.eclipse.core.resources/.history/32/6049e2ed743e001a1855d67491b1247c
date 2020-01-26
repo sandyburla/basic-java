@@ -1,0 +1,29 @@
+package com.reviews.tripadvisor.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.reviews.tripadvisor.model.RootData;
+import com.reviews.tripadvisor.service.TripAdvisorService;
+
+@RestController
+@RequestMapping(value = "/tripadvisor")
+public class TripAdvisorController {
+	
+	@Autowired
+	TripAdvisorService tripadvisorservice;
+
+	@RequestMapping(value = "/print")
+	public String print() {
+		return "sandeep";
+	}
+	
+	@RequestMapping(value = "/fetchReviews")
+	public RootData fetch(@PathVariable("pageId") Integer pageId,@PathVariable("accesskey") Integer accesskey) {
+		return tripadvisorservice.fetchReviews(pageId,accesskey);
+	}
+
+}

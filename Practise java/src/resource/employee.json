@@ -1,0 +1,20 @@
+[
+    {
+        "employee": {
+             "id": 123,
+            "firstName": "Lokesh",
+            "lastName": "Gupta",
+            "phone": "123456789",
+            "website": "howtodoinjava.com"
+        }
+    },
+    {
+        "employee": {
+              "id": 321,
+            "firstName": "Brian",
+            "lastName": "Schultz",
+            "phone": "987654321",
+            "website": "example.com"
+        }
+    }
+]

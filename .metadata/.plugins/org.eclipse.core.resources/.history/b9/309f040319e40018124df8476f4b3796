@@ -1,0 +1,17 @@
+package Multithreading;
+
+public class ExceptionE {
+
+	public static void main(String[] args)  {
+		// TODO Auto-generated method stub
+		try {
+			throw new ArithmeticException("=========");
+			//System.out.println(10/0);
+		}catch(ArithmeticException e) {
+     //throw new ArithmeticException("================");
+			System.out.println(e.getMessage());
+		}
+    // throw new ArithmeticException();
+	}
+
+}

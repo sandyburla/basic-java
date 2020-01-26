@@ -1,0 +1,58 @@
+package com.practise.sandy.controller;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.List;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
+import com.practise.sandy.model.Entity;
+import com.practise.sandy.model.SFTPLocations;
+
+public class JsonRead {
+
+	public static void main(String[] args) throws FileNotFoundException, IOException, ParseException {
+		Entity entity = new Entity();
+		String json = "/Users/sburla/Downloads/PraticeR-W/src/main/resources/text/sampleJson.json";
+		String phone = "";
+		JSONParser parser = new JSONParser();
+		Object obj = parser.parse(new FileReader(json));
+		JSONObject employeeList = (JSONObject) obj;
+		String s0 = (String) employeeList.get("r4eRtuQueue");
+		entity.setR4eRtuQueue(s0);
+		String s1 = (String) employeeList.get("processingDirectory");
+		entity.setProcessingDirectory(s1);
+		String s2 = (String) employeeList.get("archieveDirectory");
+		entity.setArchieveDirectory(s2);
+		String s3 = (String) employeeList.get("inputDirectory");
+		entity.setInputDirectory(s3);
+		
+		
+		
+		JSONArray jsonArry = (JSONArray) employeeList.get("sftpLocations");
+		List<SFTPLocations> sftp = null;
+		for (int i = 0; i < jsonArry.size(); i++) {
+			SFTPLocations locations = new SFTPLocations();
+			JSONObject phones = (JSONObject) jsonArry.get(i);
+			String a0 = (String) phones.get("ftpUserName");
+			locations.setFtpUserName(a0);
+			String a1 = (String) phones.get("ftpLocation");
+			locations.setFtpLocation(a1);
+			String a2 = (String) phones.get("ftpPassword");
+			locations.setFtpPassword(a2);
+			Long a3 = (Long) phones.get("ftpPortNumber");
+			locations.setFtpPortNumber(a3);
+			String a4 = (String) phones.get("ftpServerUrl");
+			locations.setFtpServerUrl(a4);
+			if(locations != null) {
+				System.out.println(locations);
+			sftp.add(locations);
+			}
+		}
+		System.out.println("========000====>>>>>>"+entity);
+	}
+}

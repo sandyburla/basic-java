@@ -1,0 +1,33 @@
+package MappingHibernet;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class Mapping{
+	
+	public static void main(String[] args) {
+//		 try {
+//			 SessionFactory factory = new Configuration().configure().buildSessionFactory();
+//	      } catch (Throwable ex) { 
+//	         System.err.println("Failed to create sessionFactory object." + ex);
+//	         throw new ExceptionInInitializerError(ex); 
+//	      }
+		 Mapping m = new Mapping();
+		 int x0 = m.addEmployee(1,"sandy","sandy@gmail.com","padmanagar");
+		 int x1 = m.addEmployee(1,"sandy","sandy@gmail.com","padmanagar");
+		 int x2 = m.addEmployee(1,"sandy","sandy@gmail.com","padmanagar");
+		 int x3 = m.addEmployee(1,"sandy","sandy@gmail.com","padmanagar");
+		 
+		 
+		
+		
+	}
+
+	private int addEmployee(int i, String string, String string2, String string3) {
+		// TODO Auto-generated method stub
+		SessionFactory factory = new Configuration().configure().buildSessionFactory();
+		Session session = factory.openSession();
+		return 0;
+	}
+}

@@ -1,0 +1,10 @@
+package com.reviews.tripadvisor.service;
+
+public class TripAdvisorService {
+
+	public String fetchReviews(Integer pageId, Integer accesskey) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,25 @@
+package Multithreading;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+public class EntryMap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Map<Integer,String> newmap1 = new HashMap();
+		  newmap1.put(1, "tutorials");
+	      newmap1.put(2, "point");
+	      newmap1.put(3, "is best");
+	      
+	      for(Map.Entry<Integer,String> mp: newmap1.entrySet()) {
+	    	  
+	      }
+	      
+
+	      
+	      System.out.println("Values in newmap1: "+ newmap1);
+	}
+
+}

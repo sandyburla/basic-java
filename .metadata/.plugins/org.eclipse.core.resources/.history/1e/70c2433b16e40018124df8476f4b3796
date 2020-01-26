@@ -1,0 +1,24 @@
+package Multithreading;
+
+public class DefaultException {
+
+	public static void main(String[] args) throws ArithmeticException{
+		// TODO Auto-generated method stub
+		try {
+		//System.out.println(110/0);
+		throw new ArithmeticException("please enter correct value");	
+		}catch(Exception e) {
+			//
+				// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+			//
+			// TODO Auto-generated catch block
+	}
+
+}
+class ArithmeticException extends Exception{
+	ArithmeticException(String s){
+		super(s);
+	}
+}

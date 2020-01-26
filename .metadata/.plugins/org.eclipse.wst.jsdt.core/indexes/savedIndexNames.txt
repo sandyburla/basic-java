@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+/Users/sburla/Documents/worksapce/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+356073430.index
+3115176543.index
+99870376.index
+345093350.index
+3928953162.index

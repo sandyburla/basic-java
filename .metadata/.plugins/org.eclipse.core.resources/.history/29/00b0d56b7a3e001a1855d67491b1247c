@@ -1,0 +1,44 @@
+package com.reviews.tripadvisor.service;
+
+import java.io.FileReader;
+import java.io.IOException;
+
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.WebClient;
+
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.reviews.tripadvisor.model.RootData;
+
+@Service
+public class TripAdvisorService {
+
+	public RootData fetchReviews(String pageId, String accesskey) throws JsonParseException, JsonMappingException, IOException, ParseException {
+		// TODO Auto-generated method stub
+		
+		WebClient client = WebClient.create();
+		
+		String url = "http://api.tripadvisor.com/api/partner/2.0/location/4458967/reviews?key=2A096B06CE7E4C06B2C9E37FF0CA120F&limit=50&lang=en&offset=0";
+		
+//		return client.get().uri(url).retrieve()).bodyToMono(String.class)
+		RootData rt = new RootData();
+		RestTemplate restemplate = new RestTemplate();
+		String rt2 = restemplate.getForObject(url, String.class);
+		// RootData rt = 
+		// rt2.getBody();
+		JSONParser parser = new JSONParser();
+		Object obj = parser.parse(rt2);
+		ObjectMapper mapper = new ObjectMapper();
+		String json1 = obj.toString();
+		rt = mapper.readValue(json1, RootData.class);
+		System.out.println(rt);
+		return rt;
+	}
+
+
+}

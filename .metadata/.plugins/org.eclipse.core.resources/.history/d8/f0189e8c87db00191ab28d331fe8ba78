@@ -1,0 +1,5 @@
+package com.sandeep.ticket.booking;
+
+public @interface SpringBootApplication {
+
+}

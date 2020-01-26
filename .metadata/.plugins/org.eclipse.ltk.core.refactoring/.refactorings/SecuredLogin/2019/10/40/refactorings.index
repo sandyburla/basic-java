@@ -1,0 +1,33 @@
+1569921652227	Rename package 'com.sandeep.security.SecuredLogin'
+1569924984063	Delete element
+1569925444655	Delete element
+1569925449411	Delete element
+1569925454539	Delete element
+1569925462067	Delete element
+1569925466626	Delete element
+1569925470756	Delete element
+1569925551816	Delete element
+1569925639069	Move 'js' to 'static'
+1569925646727	Move 'js' to 'templates'
+1569925656786	Move 'main.js' to 'templates'
+1569926080379	Delete element
+1569926084175	Delete element
+1569926087963	Delete element
+1569926093159	Delete element
+1569926776359	Move 'material-icon' to 'fonts'
+1569926905473	Move 'jquery-ui.min.js' to 'jquery'
+1569926908549	Move 'jquery.min.js' to 'jquery'
+1569926913203	Delete element
+1569926920403	Delete element
+1569927174382	Delete element
+1569927178910	Delete element
+1569927183105	Delete element
+1569927187359	Delete element
+1569927552280	Delete element
+1569955402074	Rename package 'com.sandeep.login.service'
+1569955425098	Rename package 'com.sandeep.login.repository'
+1570002453378	Move 'test.html' to 'templates'
+1570002456262	Move 'register.html' to 'templates'
+1570002458826	Move 'index.html' to 'templates'
+1570082653325	Rename compilation unit 'UserDatails.java'
+1570092825671	Copy file

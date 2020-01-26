@@ -1,0 +1,31 @@
+package com.reviews.tripadvisor.service;
+
+import org.json.simple.parser.JSONParser;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.WebClient;
+
+import com.reviews.tripadvisor.model.RootData;
+
+@Service
+public class TripAdvisorService {
+
+	public String fetchReviews(String pageId, String accesskey) {
+		// TODO Auto-generated method stub
+		
+		WebClient client = WebClient.create();
+		
+		String url = "http://api.tripadvisor.com/api/partner/2.0/location/4458967/reviews?key=2A096B06CE7E4C06B2C9E37FF0CA120F&limit=50&lang=en&offset=0";
+		
+//		return client.get().uri(url).retrieve()).bodyToMono(String.class)
+		
+		RestTemplate restemplate = new RestTemplate();
+		 ResponseEntity<String> rt2 = restemplate.getForObject(url, ResponseEntity.class);
+		// RootData rt = 
+		//System.out.println("sai "+rt);
+		return rt2.getBody();
+	}
+
+
+}

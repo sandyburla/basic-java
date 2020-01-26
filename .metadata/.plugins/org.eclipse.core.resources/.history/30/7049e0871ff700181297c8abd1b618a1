@@ -1,0 +1,20 @@
+package Multithreading;
+
+import java.util.HashMap;
+
+public class EntryMap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HashMap newmap1 = new HashMap();
+		  newmap1.put(1, "tutorials");
+	      newmap1.put(2, "point");
+	      newmap1.put(3, "is best");
+	      
+	      
+
+	      
+	      System.out.println("Values in newmap1: "+ newmap1);
+	}
+
+}

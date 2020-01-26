@@ -1,0 +1,61 @@
+package MappingHibernet;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class Mapping {
+	SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
+	Session session = factory.openSession();
+	Transaction tx = null;
+	Integer employeeID = null;
+
+	public static void main(String[] args) {
+		Mapping m = new Mapping();
+
+		m.addEmployee("dandy", "dandy@gmail.com", "subhashnagar");
+		m.addEmployee("sandy", "sandy@gmail.com", "padmanagar");
+		m.addEmployee("mandy", "mandy@gmail.com", "indramanagar");
+		m.addEmployee("candy", "candy@gmail.com", "bynagar");
+		m.addEmployee("randy", "randy@gmail.com", "mehruhnagar");
+
+		m.addLap("mac", "35k");
+		m.addLap("lenovo", "15k");
+		m.addLap("acer", "25k");
+		m.addLap("dell", "30k");
+
+	}
+
+	private void addLap(String string, String string2) {
+		// TODO Auto-generated method stub
+
+		try {
+			tx = session.beginTransaction();
+			Laptop l = new Laptop(string, string2);
+			session.save(l);
+			tx.commit();
+		} catch (HibernateException e) {
+			if (tx != null)
+				tx.rollback();
+			e.printStackTrace();
+		}
+		return;
+	}
+
+	private void addEmployee(String string, String string2, String string3) {
+		try {
+			tx = session.beginTransaction();
+			Student s = new Student(string, string2, string3);
+			session.save(s);
+			tx.commit();
+		} catch (HibernateException e) {
+			if (tx != null)
+				tx.rollback();
+			e.printStackTrace();
+		}
+		return;
+	}
+
+}

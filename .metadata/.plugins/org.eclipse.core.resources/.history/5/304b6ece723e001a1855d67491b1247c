@@ -1,0 +1,23 @@
+package com.reviews.tripadvisor.model;
+
+import java.util.List;
+
+public class RootData {
+	{
+	    private List<Data> data;
+
+	    private Paging paging;
+
+	    public void setData(List<Data> data){
+	        this.data = data;
+	    }
+	    public List<Data> getData(){
+	        return this.data;
+	    }
+	    public void setPaging(Paging paging){
+	        this.paging = paging;
+	    }
+	    public Paging getPaging(){
+	        return this.paging;
+	    }
+}

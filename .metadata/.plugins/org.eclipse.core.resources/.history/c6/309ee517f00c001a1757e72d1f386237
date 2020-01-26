@@ -1,0 +1,22 @@
+package Practise;
+
+import java.math.BigInteger;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+public class MaxNum {
+
+    public static void main(String[] args) {
+
+        List<Integer> numbers = Arrays.asList(10,12,5,2,87,9832,953223,12383,0,8957);
+        Collections.sort(numbers, Collections.reverseOrder());
+        System.out.println(numbers);
+        String finalNum = "";
+        for(Integer n : numbers){
+            finalNum += n;
+        }
+        BigInteger  maxNum = new BigInteger(finalNum);
+        System.out.println(maxNum);
+    }
+}

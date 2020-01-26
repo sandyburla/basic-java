@@ -1,0 +1,11 @@
+package Multithreading;
+
+public class ExceptionE {
+
+	public static void main(String[] args)  {
+		
+		//throw new ArithmeticException("sandy");
+		System.out.println(10/0);
+		}
+
+}

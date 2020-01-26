@@ -1,0 +1,14 @@
+package com.reviews.tripadvisor.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TripAdvisorController {
+	
+	public void name() {
+		System.out.println("0909090909");
+	}
+	
+	
+
+}

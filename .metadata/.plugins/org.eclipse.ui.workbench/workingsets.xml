@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1546591025776_1" label="r4e-api-partner" name="r4e-api-partner"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1547810376570_2" label="r4e-apartments" name="r4e-apartments"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1569921275478_3" label="SecuredLogin" name="SecuredLogin">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/SecuredLogin" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1517899155098_0" label="Window Working Set" name="Aggregate for window 1517899155098"/>
+</workingSetManager>

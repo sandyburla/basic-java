@@ -1,0 +1,16 @@
+package com.reviews.tripadvisor.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TripAdvisorController {
+	
+	@RequestMapping("/name")
+	public void name() {
+		System.out.println("0909090909");
+	}
+	
+	
+
+}

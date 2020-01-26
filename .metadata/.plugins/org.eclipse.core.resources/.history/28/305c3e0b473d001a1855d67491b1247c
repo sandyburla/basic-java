@@ -1,0 +1,20 @@
+package com.reviews.tripadvisor.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class TripAdvisorController {
+
+	@RequestMapping(value = "/print")
+	public String print() {
+		return "sandeep";
+	}
+	
+	@RequestMapping(value = "/fetchReviews")
+	public String fetch() {
+		return "sandeep";
+	}
+
+}
